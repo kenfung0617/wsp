@@ -50,6 +50,7 @@
 
     <div class="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-12 gap-8">
         
+        <!-- 左側：計算器主體 -->
         <div class="lg:col-span-7 bg-white/80 glass-morphism shadow-2xl rounded-3xl overflow-hidden border border-white">
             <div class="bg-slate-900 p-8 text-white relative">
                 <div class="absolute top-0 right-0 p-8 opacity-10">
@@ -61,6 +62,7 @@
             </div>
 
             <div class="p-8 space-y-6">
+                <!-- 類別選擇 -->
                 <div>
                     <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Category / 貨物類別</label>
                     <div class="grid grid-cols-2 gap-4">
@@ -82,6 +84,7 @@
                     <input type="hidden" id="cargoType" value="gold">
                 </div>
 
+                <!-- 輸入區域 -->
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">Gross Weight / 貨物毛重</label>
@@ -103,8 +106,10 @@
                     Calculate Surcharge / 立即計算
                 </button>
 
+                <!-- 錯誤提示 -->
                 <div id="errorBox" class="hidden animate-slide-up bg-red-50 border border-red-100 text-red-600 p-4 rounded-xl text-center text-sm font-medium"></div>
 
+                <!-- 結果顯示 -->
                 <div id="resultBox" class="hidden animate-slide-up">
                     <div class="p-6 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl text-white shadow-xl shadow-slate-200">
                         <p class="text-center text-slate-400 text-[10px] uppercase tracking-widest mb-4">Official Calculation / 結算明細</p>
@@ -135,6 +140,7 @@
             </div>
         </div>
 
+        <!-- 右側：收費標準與說明 -->
         <div class="lg:col-span-5 space-y-4">
             <div class="bg-white rounded-3xl p-6 text-slate-800 shadow-xl border border-slate-100">
                 <h3 class="text-slate-900 font-bold text-sm mb-4 flex items-center gap-2">
@@ -160,13 +166,14 @@
                             <p class="font-bold text-slate-900 uppercase tracking-tight">Chargeable Weight / 計費重量</p>
                             <p class="text-slate-600 mt-1">Base weight for calculation is 0.5kg for any item ≤ 0.5kg.</p>
                             <p class="text-slate-500 italic">0.5kg 或以下之貨物，均以 0.5kg 作為計費基礎。</p>
-                            <p class="mt-1">Weights over 0.5kg are rounded up to the next <b class="text-blue-600">1kg</b>.</p>
+                            <p class="mt-1">Weights over 0.5kg are rounded up to the next 1kg.</p>
                             <p class="text-slate-500 italic">超過 0.5kg 後，將以每 1kg 為單位向上取整計算。</p>
                         </div>
                     </li>
                 </ul>
             </div>
 
+            <!-- 黃金費率表 -->
             <div class="bg-white/60 glass-morphism rounded-3xl p-6 border border-white rule-card">
                 <h3 class="font-bold text-slate-800 flex items-center gap-2 mb-1">
                     <span class="text-xl">💰</span> GOLD 黃金
@@ -197,6 +204,7 @@
                 </div>
             </div>
 
+            <!-- 鑽石費率表 -->
             <div class="bg-white/60 glass-morphism rounded-3xl p-6 border border-white rule-card">
                 <h3 class="font-bold text-slate-800 flex items-center gap-2 mb-1">
                     <span class="text-xl">💎</span> DIAMOND 鑽石
